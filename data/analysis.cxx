@@ -729,19 +729,19 @@ bool passTrack(pevent* event, Int_t i)
 //			if(isBHT0 && pt>2.5 && adc>mAdc0Cut[0] && dsmadc>11*dsmadcfactor) current_emcIsTrg[current_nEmce]  = 0;
 //			if(isBHT1 && pt>3.6 && adc>mAdc0Cut[1] && dsmadc>15*dsmadcfactor) current_emcIsTrg[current_nEmce]  = 1;
 //			if(isBHT2 && pt>4.3 && adc>mAdc0Cut[2] && dsmadc>18*dsmadcfactor) current_emcIsTrg[current_nEmce]  = 2;
-/*	
+	
 			if(isBHT0 && pt>2.5 && adc>mAdc0Cut[0]*adcfactor) current_emcIsTrg[current_nEmce]  = 0;
 			if(isBHT1 && pt>3.6 && adc>mAdc0Cut[1]*adcfactor) current_emcIsTrg[current_nEmce]  = 1;
 		checkcut->Fill(7);
 			if(isBHT2 && pt>4.3 && adc>mAdc0Cut[2]*adcfactor) current_emcIsTrg[current_nEmce]  = 2;
 		checkcut->Fill(8);
-*/	
+/*	
 			if(isBHT0 && pt>2.5 && dsmadc>11) current_emcIsTrg[current_nEmce]  = 0;
 			if(isBHT1 && pt>3.6 && dsmadc>15) current_emcIsTrg[current_nEmce]  = 1;
 		checkcut->Fill(7);
 			if(isBHT2 && pt>4.3 && dsmadc>18) current_emcIsTrg[current_nEmce]  = 2;
 		checkcut->Fill(8);
-
+*/
 			if(current_emcIsTrg[current_nEmce]>=0){ 
 				current_nTrigE++;
 			}
