@@ -570,15 +570,18 @@ Int_t StMyJpsiEffMaker::Make()
 						testhist->Fill(7);
 					}
 					cout<<"pt1="<<pt1<<"dsmAdc="<<dsmAdc01<<"e1="<<e1<<endl;
-					if(pt1>2.5 && dsmAdc01>11 && e1>0 && adc01>mEmceAdcCut[0] && pe1>0.3 && pe1<1.5){
+//					if(pt1>2.5 && dsmAdc01>11 && e1>0 && adc01>mEmceAdcCut[0] && pe1>0.3 && pe1<1.5){
+					if(pt1>2.5 && dsmAdc01>11 && e1>0 && pe1>0.3 && pe1<1.5){
 						isTrg1[0] = kTRUE;
 						testhist->Fill(9);
 					}
-					if(pt1>3.6 && dsmAdc01>15 && e1>0 && adc01>mEmceAdcCut[1] && pe1>0.3 && pe1<1.5){
+//					if(pt1>3.6 && dsmAdc01>15 && e1>0 && adc01>mEmceAdcCut[1] && pe1>0.3 && pe1<1.5){
+					if(pt1>3.6 && dsmAdc01>15 && e1>0 && pe1>0.3 && pe1<1.5){
 						isTrg1[1] = kTRUE;
 						testhist->Fill(10);
 					}
-					if(pt1>4.3 && dsmAdc01>18 && e1>0 && adc01>mEmceAdcCut[2] && pe1>0.3 && pe1<1.5){
+//					if(pt1>4.3 && dsmAdc01>18 && e1>0 && adc01>mEmceAdcCut[2] && pe1>0.3 && pe1<1.5){
+					if(pt1>4.3 && dsmAdc01>18 && e1>0 && pe1>0.3 && pe1<1.5){
 						isTrg1[2] = kTRUE;
 						testhist->Fill(11);
 					}
@@ -605,17 +608,19 @@ Int_t StMyJpsiEffMaker::Make()
 						testhist->Fill(21);
 						}
 					if(pt2>2.5 && dsmAdc02>11 && e2>0 && adc02>mEmceAdcCut[0] && pe2>0.3 && pe2<1.5){ 
-
+//					if(pt2>2.5 && dsmAdc02>11 && e2>0 && pe2>0.3 && pe2<1.5){ 
 						cout<<"nHitsFit2="<<nHitsFit2<<"nMaxPts2="<<nMaxPts2<<"dca2="<<dca2<<"eta2="<<eta2<<"nsigma2="<<nsigma2<<"nHitsdedx2="<<nHitsdedx2<<"pt2="<<pt2<<endl;
 						isTrg2[0] = kTRUE;
 						testhist->Fill(12);
 					}
 		
 					if(pt2>3.6 && dsmAdc02>15 && e2>0 && adc02>mEmceAdcCut[1] && pe2>0.3 && pe2<1.5){
+//					if(pt2>3.6 && dsmAdc02>15 && e2>0 && pe2>0.3 && pe2<1.5){
 						   	isTrg2[1] = kTRUE;
 							testhist->Fill(13);
 						}
 					if(pt2>4.3 && dsmAdc02>18 && e2>0 && adc02>mEmceAdcCut[2] && pe2>0.3 && pe2<1.5) {
+//					if(pt2>4.3 && dsmAdc02>18 && e2>0 && pe2>0.3 && pe2<1.5) {
 						isTrg2[2] = kTRUE;
 						testhist->Fill(14);
 					}
