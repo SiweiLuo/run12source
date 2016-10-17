@@ -647,7 +647,7 @@ Int_t StMyJpsiEffMaker::Make()
 				cout<<"isEmc1"<<isEmc1<<"isEmc2"<<isEmc2<<"isTpc1"<<isTpc1[0]<<"isTpc2"<<isTpc2[0]<<"isTrg1[0]"<<isTrg1[0]<<"isTrg2[0]"<<isTrg2[0]<<endl;
 				testhist->Fill(26);	
 //				if((isEmc1 || isTOF1) || (isEmc2 || isTOF2)){  //  or passed tof cuts 
-//					if(JpsiRc.M()>3.0 && JpsiRc.M()<3.2 && isTpc1 && isTpc2){
+					if(JpsiRc.M()>3.0 && JpsiRc.M()<3.2 && isTpc1 && isTpc2){
 						if((isTpc1[0] && isTpc2[0]) || (isTpc2[0] && isEmc1) || (isTpc1[0] && isEmc2) || (isEmc1 && isEmc2)) {
 							hMBJpsiCosThetaPhiPt1->Fill(costheta,dphi_HX,JpsiMc.Pt(),weight1);
 							hMBJpsiCosThetaPhiPtCS1->Fill(TMath::Cos(dtheta_CS),dphi_CS,JpsiMc.Pt(),weight1);
@@ -671,7 +671,7 @@ Int_t StMyJpsiEffMaker::Make()
 					}
 				}
 //			}	
-//			}
+			}
 			}
 			return kStOk;
 			}
